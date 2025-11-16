@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>student info</title>
+  </head>
+  <body>
+
+<h1>Students</h1>
+<table border="1">
+  <thead>
+    <th>ID</th>
+    <th>firstname</th>
+    <th>lastname</th>
+    <th>test score</th>
+  </thead>
+  {% for student in students %}
+  <tr>
+    <td>{{student.id}}</td>
+    <td>{{student.firstname}}</td>
+    <td>{{student.lastname}}</td>
+    <td>{{student.testscore}}</td>
+    <td><a href="/delete/{{student.id}}">Delete</a></td>
+    <td><a href="/update/{{student.id}}">Update</a></td>
+  </tr>
+
+
+
+
+
+{% endfor %}
+
+</table>
+<br><br>
+<a href="/create">add student</a>
+
+  </body>
+</html>

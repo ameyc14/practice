@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>update</title>
+  </head>
+  <body>
+
+    <form  method="post">
+      {% csrf_token %}
+      Name:<input type="text" name="Name" value="{{stud.Name}}"> <br>
+      Maths:<input type="text" name="Maths" value="{{stud.Maths}}"><br>
+      Physics: <input type="text" name="Physics" value="{{stud.Physics}}"><br>
+      Chemistry:<input type="text" name="Chemistry" value="{{stud.Chemistry}}"><br>
+      <input type="submit" value="Update">
+    </form>
+
+  </body>
+</html>

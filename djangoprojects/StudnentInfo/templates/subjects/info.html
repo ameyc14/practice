@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student Names</title>
+
+  </head>
+  <body>
+    <h1> student details are given below</h1>
+    <table border="1px">
+
+    <thead>
+      <th>Name</th>
+      <th>Maths</th>
+      <th>Physics</th>
+      <th>Chemistry</th>
+    </thead>
+    {% for stud in students %}
+    <tr>
+      <td>{{stud.name}}</td>
+      <td>{{stud.Maths}}</td>
+      <td>{{stud.Physics}}</td>
+      <td>{{stud.Chemistry}}</td>
+      <td><a href="/delete/{{stud.id}}">Delete</a></td>
+      <td><a href="/update/{{stud.name}}">Update</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/create">add student</a>
+  </body>
+</html>
