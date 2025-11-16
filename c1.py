@@ -10,5 +10,5 @@ class Constant:
             self.marks=marks
             print(self.name,self.marks)
 
-c1=Constant(3000)
+c1=Constant(54000)
 c2=Constant('Amey',33)
